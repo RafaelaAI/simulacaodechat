@@ -57,8 +57,8 @@
       justify-content: space-between;
     }
     iframe {
+      flex: 1; /* ocupa o espaço disponível */
       width: 100%;
-      height: 100%;
       border: none;
     }
     .bottom-bar {
@@ -91,12 +91,13 @@
       <span class="username">Rafaela Victor</span>
     </div>
     <div class="chat-frame">
-      <iframe src="https://rafaelaai.github.io/simulacaodechat/" allow="clipboard-write"></iframe>
+      <!-- Mude essa URL para o link do chatbot externo que você quer embutir -->
+      <iframe src="https://typebot.co/agendamento-o1ivv8n" allow="clipboard-write"></iframe>
       <div class="bottom-bar">
-   </div>
+        <input type="text" placeholder="Digite sua mensagem..."/>
+        <img src="send-icon.png" alt="Enviar"/>
+      </div>
     </div>
   </div>
 </body>
-  
 </html>
-
