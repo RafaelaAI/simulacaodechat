@@ -48,18 +48,19 @@
       font-size: 16px;
     }
     .chat-frame {
-      flex: 1;
+      flex: 1; /* ocupa o espaço restante */
+      display: flex;
+      flex-direction: column;
       background-image: url('fundo.jpg');
       background-size: cover;
       background-position: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      height: 100%;
     }
     iframe {
-      flex: 1; /* ocupa o espaço disponível */
+      flex: 1; /* ocupa o espaço restante dentro do chat-frame */
       width: 100%;
       border: none;
+      min-height: 0; /* evita crescimento excessivo */
     }
     .bottom-bar {
       background-color: #fff;
@@ -67,6 +68,8 @@
       border-top: 1px solid #ccc;
       display: flex;
       align-items: center;
+      height: 50px; /* altura fixa para evitar sobreposição */
+      flex-shrink: 0; /* evitar que encolha */
     }
     .bottom-bar input {
       flex: 1;
